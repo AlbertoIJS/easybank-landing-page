@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css?family=Public+Sans:300,400&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html {
+  background-color: #fff;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+}
+
+.gradient-btn {
+  background: #fdfcf7;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #31d35c), to(#2bb7da));
+  background: linear-gradient(90deg, #31d35c 20%, #2bb7da 100%);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  padding: 0.4rem 1.4rem;
+  font-size: 1rem;
+}
+
+.gradient-btn:hover {
+  opacity: 80%;
+}
+
+.header-container {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem;
+}
+
+.header-container .hamburger {
+  display: none;
+}
+
+.navbar {
+  width: 5%;
+  margin: 0 9rem;
+}
+
+.list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.list-container li {
+  margin-right: 1rem;
+}
+
+.list-container li a {
+  color: #9698a6;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.list-container li:last-child {
+  margin: 0;
+}
+
+.cta {
+  background-color: #f3f4f6;
+  position: relative;
+  height: 65vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.cta::before {
+  background: url(../assets/images/bg-intro-desktop.svg) no-repeat right;
+  content: '';
+  position: absolute;
+  width: 100%;
+  max-width: 75rem;
+  height: 50rem;
+  top: -8rem;
+  right: -15rem;
+  z-index: -4;
+}
+
+.cta::after {
+  background: url(../assets/images/image-mockups.png) no-repeat right/contain;
+  content: '';
+  position: absolute;
+  height: 60rem;
+  width: 100%;
+  max-width: 65rem;
+  top: -7.5rem;
+  right: -8.5rem;
+  z-index: -3;
+}
+
+.cta .jumbotron {
+  height: 100%;
+  max-width: 25%;
+  margin-left: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cta .jumbotron h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.cta .jumbotron p {
+  color: #9698a6;
+}
+
+.cta .jumbotron > * {
+  margin-bottom: 2rem;
+}
+
+.cta .jumbotron button {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+@media (max-width: 576px) {
+  .header-container {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-container .hamburger {
+    display: block;
+  }
+  .header-container .hamburger > * {
+    background-color: #000;
+    width: 25px;
+    height: 1px;
+    margin-bottom: 0.25rem;
+  }
+  .header-container .logo {
+    width: 50%;
+  }
+  .header-container button {
+    display: none;
+  }
+  .header-container .navbar {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    background-color: #fff;
+    position: absolute;
+    top: 3.1rem;
+    left: 1.25rem;
+    width: 90%;
+    border-radius: 5px;
+  }
+  .header-container .hidden {
+    display: none;
+  }
+  .list-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list-container li {
+    margin: 0.45rem 0;
+  }
+  .list-container li a {
+    color: #000;
+  }
+  .list-container li:last-child {
+    margin-bottom: 0.45rem;
+  }
+  .cta {
+    height: 100vh;
+  }
+  .cta .jumbotron {
+    max-width: 80%;
+    margin: 35% auto;
+  }
+  .cta .jumbotron h1 {
+    text-align: center;
+    line-height: 1.2;
+    font-size: 2.5rem;
+  }
+  .cta .jumbotron p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+  .cta .jumbotron button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .cta::after {
+    top: -24rem;
+    right: 0;
+  }
+  .cta::before {
+    background: url(../assets/images/bg-intro-mobile.svg) no-repeat top;
+    top: -1rem;
+    right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .list-container li a {
+    padding-bottom: 1.4rem;
+    position: relative;
+    -webkit-transition: 0.3s;
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  }
+  .list-container li a:hover {
+    color: #2d314d;
+    border-bottom: solid 3px #31d35c;
+    border-color: linear-gradient(90deg, #31d35c 20%, #2bb7da 100%);
+  }
+  .list-container li a::after {
+    content: '';
+    width: 0px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+    background: linear-gradient(90deg, #31d35c, #2bb7da);
+    -webkit-transition: transform 250ms ease-in-out;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
