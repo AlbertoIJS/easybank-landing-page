@@ -207,23 +207,16 @@ body {
 
 @media (max-width: 576px) {
   .header-container {
-    position: relative;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
   }
   .header-container .hamburger {
     display: block;
-  }
-  .header-container .hamburger > * {
-    background-color: #000;
-    width: 25px;
-    height: 1px;
-    margin-bottom: 0.25rem;
   }
   .header-container .logo {
     width: 50%;

@@ -180,17 +180,11 @@ body {
 // Small devices (landscape phones, 576px and down)
 @media (max-width: 576px) {
   .header-container {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;    
+    width: 100%;
     .hamburger {
       display: block;
-      & > * {
-        background-color: #000;
-        width: 25px;
-        height: 1px;
-        margin-bottom: 0.25rem;
-      }
     }
 
     .logo {
